@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{{! ignore me }}
+{{> components/header}}
+<h1>{{name}}</h1>
+<h1>{{age}}</h1>
+<h1>{{{blank}}}</h1>
+
+<!--if-else判断-->
+{{#hasList}}
+    <ul>
+        <!--循环-->
+        {{#list}}
+            <li>
+                <h3>name: {{name}}</h3>
+                <h3>age: {{age}}</h3>
+                <ul>
+                    {{#list}}
+                        <li>字母: {{.}}</li>
+                    {{/list}}
+                </ul>
+            </li>
+        {{/list}}
+    </ul>
+{{/hasList}}
+<hr>
+<h1>apiData.data = {{apiData.data}}</h1>
+<h1>apiData.msg = {{apiData.msg}}</h1>
+<h1>apiData.status = {{apiData.status}}</h1>
+<hr>
+{{> components/footer}}
+<script>
+    console.log({{list.length}})
+</script>
+</body>
+</html>
+

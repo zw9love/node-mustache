@@ -1,0 +1,21 @@
+{
+  "name": "node-mustache",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zw9love",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mustache": "^3.0.1",
+    "mustache-express": "^1.2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
