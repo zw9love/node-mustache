@@ -11,10 +11,11 @@
   },
   "watch": [
     "app.js",
-    "templates/**/"
+    "templates/**/",
+    "static/**/"
   ],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "ejs js json mustache"
+  "ext": "ejs js json mustache css"
 }
