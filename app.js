@@ -51,6 +51,27 @@ app.get('/', function(req, response) {
 
 });
 
+app.get('/show/:ids', function(req, response) {
+    // console.log(req.path)
+    // console.log(req.params)
+    // console.log(req.query)
+    // console.log(req.body)
+    let data = {
+        title: '详情页',
+        name: 'zengwei',
+        age: 28,
+        hasList: true,
+        list: [
+            {name: '大熊', age: 30, list: ['a', 'b']} ,
+            {name: '静香', age: 30, list: ['c', 'd']} ,
+            {name: '胖虎', age: 30, list: ['e', 'f']} ,
+        ],
+        req
+    }
+    response.render('showDetails', data);//把读取的数据填充进模板
+
+});
+
 var server = app.listen(3000, function() {
     var host = server.address().address;
     var port = server.address().port;
